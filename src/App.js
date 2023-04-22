@@ -12,9 +12,7 @@ function App() {
   return (
     <div className="App">
       <h1 className="gameName">QuizGame</h1>
-      <a href="/">
-        <div className="Logo"></div>
-      </a>
+      <div className="Logo" onClick={() => setGameState("menu")}></div>
       <div className="Menu">
         <QuizContext.Provider value={{ gameState, setGameState, score, setScore }}>
           {gameState === "menu" && <Mainmenu />}
